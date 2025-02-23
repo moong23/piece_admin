@@ -81,8 +81,7 @@ const ReportModalArea = ({ report, onClose }: ModalAreaProps) => {
               </tbody>
             </CustomTable>
             <CustomPagination
-              page={page}
-              setPage={setPage}
+              fetchPage={setPage}
               hasNext={hasNext}
               startPage={startPage}
               endPage={endPage}
