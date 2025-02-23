@@ -1,0 +1,40 @@
+table {
+  border-collapse: collapse;
+  background-color: white;
+  text-align: center;
+}
+
+thead,
+tbody > tr {
+  border-bottom: 1px solid #f0f1f3;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+thead {
+  background-color: #f6efff;
+  border-bottom: 1px solid #6f00fb;
+}
+
+th {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.07px;
+  padding: 16px 20px;
+}
+
+col,
+td {
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: 0.07px;
+  padding: 10px;
+  white-space: pre-wrap;
+}
