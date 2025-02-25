@@ -2,7 +2,7 @@ import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import axios, { AxiosError } from "axios";
 
 const clientInstance = axios.create({
-  baseURL: "http://admin.puzzly.site:8081/admin/v1",
+  baseURL: "https://admin.puzzly.site/admin/v1",
   timeout: 1000,
 });
 
