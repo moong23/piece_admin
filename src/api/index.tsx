@@ -95,7 +95,7 @@ export const updateProfileStatus = async (
       "Authorization"
     ] = `Bearer ${accessToken}`;
 
-    const response = await clientInstance.post(`/${userId}/profile`, {
+    const response = await clientInstance.post(`/users/${userId}/profile`, {
       rejectImage,
       rejectDescription,
     });

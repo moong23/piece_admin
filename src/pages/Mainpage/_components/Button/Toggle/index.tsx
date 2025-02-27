@@ -16,7 +16,7 @@ const ToggleButton = ({ text, user, onUpdate }: ToggleButtonProps) => {
     setIsRejected(text === "사진" ? user.rejectImage : user.rejectDescription);
   }, [user, text]);
 
-  const isComplete = user.profileStatus === "완료";
+  const isComplete = user.profileStatus === "통과";
 
   const handleClickButton = () => {
     if (isComplete) {
@@ -38,22 +38,22 @@ const ToggleButton = ({ text, user, onUpdate }: ToggleButtonProps) => {
     <div
       role="button"
       className={`${
-        isRejected
+        isComplete
+          ? "bg-grayscale-light3 cursor-default"
+          : isRejected
           ? "bg-primary-default"
-          : isComplete
-          ? "bg-grayscale-light3"
           : "bg-primary-light"
-      } w-full py-3 rounded-lg`}
+      } w-full py-3 rounded-lg cursor-pointer`}
       onClick={handleClickButton}
     >
       <span
         className={`${
-          isRejected
+          isComplete
+            ? "text-grayscale-dark3 cursor-default"
+            : isRejected
             ? "text-grayscale-white"
-            : isComplete
-            ? "text-grayscale-dark3"
             : "text-primary-default"
-        } text-heading-s`}
+        } text-heading-s cursor-pointer`}
       >
         {text}
       </span>

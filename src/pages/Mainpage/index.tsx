@@ -22,6 +22,7 @@ const MainPage = () => {
   const [modalUser, setModalUser] =
     useState<UserProfileValidationResponse | null>();
   const { data: ApiData, isLoading } = useUserQuery(page - 1, LIMIT);
+  console.log(ApiData);
 
   const [data, setData] = useState<UserProfileValidationResponse[]>([]);
 
